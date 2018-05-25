@@ -17,3 +17,21 @@ function getLocation() {
   }
 }
 // https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation
+
+
+
+function getWeather(lat, long) {
+  const root = "https://fcc-weather-api.glitch.me/api/current?";
+  fetch(`${root}lat=${lat}&lon=${long}`, { method: "get" })
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(myJson.name);
+    loc.innerHTML = myJson.name;
+    temNumber.innerHTML = myJson.main.temp;
+    weatherCondition.innerHTML = myJson.weather[0].main;
+    weatherIcon.innerHTML = `<img src="${myJson.weather[0].icon}" />`
+  })
+}
+// https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
