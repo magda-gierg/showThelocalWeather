@@ -1,0 +1,16 @@
+.row {
+  font-family: 'Amatic SC', cursive;
+}
+h1 {
+    font-size: 3.6rem;
+    line-height: 1.25;
+    letter-spacing: -.1rem;
+    padding-top: 70px;
+    color: #14213d;
+}
+body {
+  text-align: center;
+}
+.info {
+  font-size:2rem;
+}
